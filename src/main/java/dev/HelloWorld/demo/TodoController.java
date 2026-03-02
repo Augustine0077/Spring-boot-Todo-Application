@@ -21,12 +21,10 @@ public class TodoController {
 
     // Get Todo by Path Variable (BEST PRACTICE)
     // Example: GET /api/v1/todo/1
+    
     @GetMapping("/{id}")
     ResponseEntity<Todo> getTodoById(@PathVariable long id) {
-        return new ResponseEntity<>(
-                todoService.getTodoById(id),
-                HttpStatus.OK
-        );
+        return new ResponseEntity<Todo>(todoService.getTodoById(id), HttpStatus.OK);
     }
 
     // Get Todo using Request Param
@@ -41,8 +39,7 @@ public class TodoController {
     ResponseEntity<Todo> createUser(@RequestBody Todo todo) {
         return new ResponseEntity<>(
                 todoService.createTodo(todo),
-                HttpStatus.CREATED
-        );
+                HttpStatus.CREATED);
     }
 
     // Update Todo
