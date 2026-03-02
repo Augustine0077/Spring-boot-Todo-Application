@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.Data;
 
+
 @Entity
 @Data
 public class Todo {
@@ -12,7 +13,6 @@ public class Todo {
     @GeneratedValue
     long id;
     String title;
-    String Discription;
+    String description;
     Boolean isComplete;
-
 }
